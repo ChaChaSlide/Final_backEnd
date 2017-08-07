@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\JewelryPiece;
 
 class JewelryPieceController extends Controller
 {
@@ -13,7 +14,8 @@ class JewelryPieceController extends Controller
  
     public function show(JewelryPiece $jewelry_piece)
     {
-        return $jewelry_piece
+        return $jewelry_piece;
+    }
 
     public function store(Request $request)
     {

@@ -13,7 +13,7 @@ class CreateJewelryPiece extends Migration
      */
     public function up()
     {
-        Schema::create('jewelry_piece', function (Blueprint $table) {
+        Schema::create('jewelry_pieces', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->integer('sub_jewelry_type_id')->unsigned();
@@ -31,6 +31,6 @@ class CreateJewelryPiece extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jewelry_piece');
+        Schema::dropIfExists('jewelry_pieces');
     }
 }
