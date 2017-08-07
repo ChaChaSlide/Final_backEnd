@@ -16,3 +16,15 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+// jewelry type end points
+Route::get('jewelry_types', 'JewelryTypeController@index');
+Route::get('jewelry_types/{jewelry_type}', 'JewelryTypeController@show');
+// sub_jewelry_type end points
+Route::get('sub_jewelry_types', "SubJewelryTypeController@index");
+Route::get('sub_jewelry_types/{sub_jewelry_type}', "SubJewelryTypeController@show");
+// jewelry pieces
+Route::get('jewelry_pieces', "JewelryPieceController@index");
+Route::get('jewelry_pieces/{jewelry_piece}, "JewelryPieceController@show');
+Route::post('jewelry_pieces', 'JewelryPieceControllerController@store');
+Route::put('jewelry_pieces/{jewelry_piece}', 'JewelryPieceController@update');
+Route::delete('jewelry_pieces/{jewelry_piece}', 'JewelryPieceController@delete');
